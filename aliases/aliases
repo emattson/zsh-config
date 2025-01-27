@@ -1,0 +1,65 @@
+# +--------+
+# | System |
+# +--------+
+
+alias bigf= 'find / -xdev -type f -size +500M'  # display "big" files > 500M
+
+# +----+
+# | ls |
+# +----+
+
+alias ls='ls --color=auto'
+alias l='ls -l'
+alias ll='ls -lahF'
+alias lls='ls -lahFtr'
+alias la='ls -alh'
+alias lc='ls -CF'
+
+# +------+
+# | wget |
+# +------+
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+
+# +-------+
+# | files |
+# +-------+
+
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+
+# +------+
+# | grep |
+# +------+
+
+alias grep="grep -P -i --color=auto"
+
+# +------+
+# | ping |
+# +------+
+
+alias pg='ping 8.8.8.8'
+
+# +------+
+# | time |
+# +------+
+
+alias time='/usr/bin/time'
+
+# +----+
+# | bc |
+# +----+
+
+alias calc="noglob calcul"
+
+# +--------+
+# | docker |
+# +--------+
+alias dockls="docker container ls | awk 'NR > 1 {print \$NF}'"                  # display names of running containers
+alias dockRr='docker rm $(docker ps -a -q)'                                     # delete every containers / images
+alias dockRr='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'   # delete every containers / images
+alias dockstats='docker stats $(docker ps -q)'                                  # stats on images
+alias dockimg='docker images'                                                   # list images installed
+alias dockprune='docker system prune -a'                                        # prune everything
+alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'                    # run as the host user
+alias dockce='docker-compose run --rm'
