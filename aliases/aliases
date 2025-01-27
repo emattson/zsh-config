@@ -15,6 +15,15 @@ alias lls='ls -lahFtr'
 alias la='ls -alh'
 alias lc='ls -CF'
 
+# +----+
+# | cd |
+# +----+
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 # +------+
 # | wget |
 # +------+
@@ -63,3 +72,4 @@ alias dockimg='docker images'                                                   
 alias dockprune='docker system prune -a'                                        # prune everything
 alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'                    # run as the host user
 alias dockce='docker-compose run --rm'
+
